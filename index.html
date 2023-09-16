@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries Searcher</title>
+
+    <link rel="stylesheet" href="tailwind.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-primary">
+    <header class="relative shadow-sm dark:bg-dark-blue">
+      <div
+        class="container mx-auto flex items-center justify-between px-10 py-5"
+      >
+        <a class="font-bold dark:text-very-light" href="index.html"
+          >Where in the world?</a
+        >
+        <button
+          class="dark-mode-button flex items-center gap-2"
+          title="dark mode"
+        >
+          <i
+            class="fa-regular fa-moon -rotate-[24deg] dark:text-very-light"
+          ></i>
+          <span class="hidden dark:text-very-light sm:block">Dark Mode</span>
+        </button>
+      </div>
+    </header>
+    <section
+      class="min-h-[calc(100dvh-64px)] bg-very-light dark:bg-very-dark-blue"
+    >
+      <div class="container mx-auto px-10 py-12">
+        <button
+          class="back-button flex hidden w-[120px] items-center justify-between bg-white px-7 py-2 drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back</span>
+        </button>
+        <div class="navigation flex flex-col justify-between gap-3 md:flex-row">
+          <div
+            class="flex h-12 w-full items-center drop-shadow-md md:w-[400px]"
+          >
+            <button
+              class="search-button flex h-full w-20 items-center justify-center bg-white dark:bg-dark-blue"
+            >
+              <i
+                class="fa-solid fa-magnifying-glass text-dark-gray dark:text-very-light"
+              ></i>
+            </button>
+            <input
+              type="text"
+              placeholder="Search for a country..."
+              class="h-full w-full p-2 text-very-light outline-none dark:bg-dark-blue dark:placeholder:text-very-light"
+            />
+          </div>
+          <div
+            class="relative z-10 flex w-[180px] cursor-pointer items-center justify-between rounded-md bg-white drop-shadow-md dark:bg-dark-blue"
+          >
+            <div
+              class="filter-by-region flex w-full items-center justify-between px-5 py-3 text-sm dark:bg-dark-blue dark:text-very-light"
+            >
+              <span>Filter by Region</span>
+              <i class="fa-solid fa-angle-down fa-sm"></i>
+            </div>
+            <ul
+              class="regions-list absolute left-0 top-14 hidden w-full flex-col rounded-md bg-white py-2 text-sm dark:bg-dark-blue dark:text-very-light"
+            >
+              <li
+                class="regions-list-element px-5 py-1 transition hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                Africa
+              </li>
+              <li
+                class="regions-list-element px-5 py-1 transition hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                Americas
+              </li>
+              <li
+                class="regions-list-element px-5 py-1 transition hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                Asia
+              </li>
+              <li
+                class="regions-list-element px-5 py-1 transition hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                Europe
+              </li>
+              <li
+                class="regions-list-element px-5 py-1 transition hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                Oceania
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="cards-container grid grid-cols-1 grid-rows-1 gap-5 pt-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10 xl:grid-cols-4 xl:gap-16"
+        >
+          <div
+            class="card flex cursor-pointer flex-col bg-white drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+          >
+            <div class="flag h-1/2"></div>
+            <div class="mt-auto flex h-1/2 flex-col justify-center p-5">
+              <h3 class="country-name pb-2 text-lg font-bold"></h3>
+              <span
+                >population:
+                <span
+                  class="population text-dark-gray dark:text-gray-300"
+                ></span
+              ></span>
+              <span
+                >Region:
+                <span class="region text-dark-gray dark:text-gray-300"></span
+              ></span>
+              <span
+                >Capital:
+                <span class="capital text-dark-gray dark:text-gray-300"></span
+              ></span>
+            </div>
+          </div>
+          <div
+            class="card flex cursor-pointer flex-col bg-white drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+          >
+            <div class="flag h-1/2"></div>
+            <div class="mt-auto flex h-1/2 flex-col justify-center p-5">
+              <h3 class="country-name pb-2 text-lg font-bold"></h3>
+              <span
+                >population:
+                <span
+                  class="population text-dark-gray dark:text-gray-300"
+                ></span
+              ></span>
+              <span
+                >Region:
+                <span class="region text-dark-gray dark:text-gray-300"></span
+              ></span>
+              <span
+                >Capital:
+                <span class="capital text-dark-gray dark:text-gray-300"></span
+              ></span>
+            </div>
+          </div>
+          <div
+            class="card flex cursor-pointer flex-col bg-white drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+          >
+            <div class="flag h-1/2"></div>
+            <div class="mt-auto flex h-1/2 flex-col justify-center p-5">
+              <h3 class="country-name pb-2 text-lg font-bold"></h3>
+              <span
+                >population:
+                <span
+                  class="population text-dark-gray dark:text-gray-300"
+                ></span
+              ></span>
+              <span
+                >Region:
+                <span class="region text-dark-gray dark:text-gray-300"></span
+              ></span>
+              <span
+                >Capital:
+                <span class="capital text-dark-gray dark:text-gray-300"></span
+              ></span>
+            </div>
+          </div>
+          <div
+            class="card flex cursor-pointer flex-col bg-white drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+          >
+            <div class="flag h-1/2"></div>
+            <div class="mt-auto flex h-1/2 flex-col justify-center p-5">
+              <h3 class="country-name pb-2 text-lg font-bold"></h3>
+              <span
+                >population:
+                <span
+                  class="population text-dark-gray dark:text-gray-300"
+                ></span
+              ></span>
+              <span
+                >Region:
+                <span class="region text-dark-gray dark:text-gray-300"></span
+              ></span>
+              <span
+                >Capital:
+                <span class="capital text-dark-gray dark:text-gray-300"></span
+              ></span>
+            </div>
+          </div>
+          <div
+            class="card flex cursor-pointer flex-col bg-white drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+          >
+            <div class="flag h-1/2"></div>
+            <div class="mt-auto flex h-1/2 flex-col justify-center p-5">
+              <h3 class="country-name pb-2 text-lg font-bold"></h3>
+              <span
+                >population:
+                <span
+                  class="population text-dark-gray dark:text-gray-300"
+                ></span
+              ></span>
+              <span
+                >Region:
+                <span class="region text-dark-gray dark:text-gray-300"></span
+              ></span>
+              <span
+                >Capital:
+                <span class="capital text-dark-gray dark:text-gray-300"></span
+              ></span>
+            </div>
+          </div>
+          <div
+            class="card flex cursor-pointer flex-col bg-white drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+          >
+            <div class="flag h-1/2"></div>
+            <div class="mt-auto flex h-1/2 flex-col justify-center p-5">
+              <h3 class="country-name pb-2 text-lg font-bold"></h3>
+              <span
+                >population:
+                <span
+                  class="population text-dark-gray dark:text-gray-300"
+                ></span
+              ></span>
+              <span
+                >Region:
+                <span class="region text-dark-gray dark:text-gray-300"></span
+              ></span>
+              <span
+                >Capital:
+                <span class="capital text-dark-gray dark:text-gray-300"></span
+              ></span>
+            </div>
+          </div>
+          <div
+            class="card flex cursor-pointer flex-col bg-white drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+          >
+            <div class="flag h-1/2"></div>
+            <div class="mt-auto flex h-1/2 flex-col justify-center p-5">
+              <h3 class="country-name pb-2 text-lg font-bold"></h3>
+              <span
+                >population:
+                <span
+                  class="population text-dark-gray dark:text-gray-300"
+                ></span
+              ></span>
+              <span
+                >Region:
+                <span class="region text-dark-gray dark:text-gray-300"></span
+              ></span>
+              <span
+                >Capital:
+                <span class="capital text-dark-gray dark:text-gray-300"></span
+              ></span>
+            </div>
+          </div>
+          <div
+            class="card flex cursor-pointer flex-col bg-white drop-shadow-md dark:bg-dark-blue dark:text-very-light"
+          >
+            <div class="flag h-1/2"></div>
+            <div class="mt-auto flex h-1/2 flex-col justify-center p-5">
+              <h3 class="country-name pb-2 text-lg font-bold"></h3>
+              <span
+                >population:
+                <span
+                  class="population text-dark-gray dark:text-gray-300"
+                ></span
+              ></span>
+              <span
+                >Region:
+                <span class="region text-dark-gray dark:text-gray-300"></span
+              ></span>
+              <span
+                >Capital:
+                <span class="capital text-dark-gray dark:text-gray-300"></span
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="chosen-card-container grid hidden min-h-full grid-cols-1 gap-20 pt-10 dark:text-very-light lg:grid-cols-2"
+        >
+          <div class="chosen-country-flag"></div>
+          <div class="chosen-country-info-container">
+            <h2 class="chosen-country-name pb-6 text-3xl font-bold"></h2>
+            <div
+              class="chosen-country-info grid grid-cols-1 md:grid-cols-2 md:gap-20"
+            >
+              <div class="flex flex-col gap-2">
+                <span class="font-bold"
+                  >Native Name:
+                  <span
+                    class="chosen-country-native-name font-normal dark:text-gray-300"
+                  ></span
+                ></span>
+                <span class="font-bold"
+                  >Population:
+                  <span
+                    class="chosen-country-population font-normal dark:text-gray-300"
+                  ></span
+                ></span>
+                <span class="font-bold"
+                  >Region:
+                  <span
+                    class="chosen-country-region font-normal dark:text-gray-300"
+                  ></span
+                ></span>
+                <span class="font-bold"
+                  >Sub Region:
+                  <span
+                    class="chosen-country-sub-region font-normal dark:text-gray-300"
+                  ></span
+                ></span>
+                <span class="font-bold"
+                  >Capital:
+                  <span
+                    class="chosen-country-capital font-normal dark:text-gray-300"
+                  ></span
+                ></span>
+              </div>
+              <div class="flex flex-col gap-2 pt-8 md:pt-0">
+                <span class="font-bold"
+                  >Top Level Domain:
+                  <span
+                    class="chosen-country-domain font-normal dark:text-gray-300"
+                  ></span
+                ></span>
+                <span class="font-bold"
+                  >Currencies:
+                  <span
+                    class="chosen-country-currencies font-normal dark:text-gray-300"
+                  ></span
+                ></span>
+                <span class="chosen-country-languages font-bold"
+                  >Languages:
+                </span>
+              </div>
+            </div>
+            <div
+              class="border-countries flex w-full flex-wrap items-center gap-2 pt-10 font-bold"
+            >
+              Border Countries:
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
