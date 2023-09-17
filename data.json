@@ -4547,7 +4547,7 @@
     "area": 1002450,
     "gini": 31.5,
     "timezones": ["UTC+02:00"],
-    "borders": ["ISR", "LBY", "SDN"],
+    "borders": [ "LBY", "SDN"],
     "nativeName": "مصر‎",
     "numericCode": "818",
     "flags": {
@@ -7769,7 +7769,7 @@
     "area": 89342,
     "gini": 33.7,
     "timezones": ["UTC+03:00"],
-    "borders": ["IRQ", "ISR", "SAU", "SYR"],
+    "borders": ["IRQ",  "SAU", "SYR"],
     "nativeName": "الأردن",
     "numericCode": "400",
     "flags": {
@@ -8312,7 +8312,7 @@
     "area": 10452,
     "gini": 31.8,
     "timezones": ["UTC+02:00"],
-    "borders": ["ISR", "SYR"],
+    "borders": [ "SYR"],
     "nativeName": "لبنان",
     "numericCode": "422",
     "flags": {
@@ -11420,7 +11420,7 @@
     "demonym": "Palestinian",
     "gini": 33.7,
     "timezones": ["UTC+02:00"],
-    "borders": ["ISR", "EGY", "JOR"],
+    "borders": [ "EGY", "JOR"],
     "nativeName": "فلسطين",
     "numericCode": "275",
     "flags": {
@@ -14790,7 +14790,7 @@
     "area": 185180,
     "gini": 37.5,
     "timezones": ["UTC+02:00"],
-    "borders": ["IRQ", "ISR", "JOR", "LBN", "TUR"],
+    "borders": ["IRQ",  "JOR", "LBN", "TUR"],
     "nativeName": "سوريا",
     "numericCode": "760",
     "flags": {
