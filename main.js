@@ -64,7 +64,7 @@ searchButton.onclick = function () {
         return x.json();
       })
       .then((data) => {
-        for (let i = 0; i < 250; i++) {
+        for (let i = 0; i < 249; i++) {
           if (input.value == data[i].name) {
             cardContainer.innerHTML = ``;
             // make the card
@@ -164,7 +164,7 @@ backButton.onclick = () => {
 
 // make the home page cards
 function makeTheHomePageCards(data) {
-  for (let i = 0; i < 250; i++) {
+  for (let i = 0; i < 249; i++) {
     for (let j = 0; j < 8; j++) {
       if (data[i].name == "Germany") {
         flags[0].innerHTML = `<img src='${data[i].flag}' alt='${data[i].name}' title='${data[i].name}' class='h-full object-cover w-full'>`;
@@ -238,7 +238,7 @@ function filterTheCountriesByRegion() {
           return x.json();
         })
         .then((data) => {
-          for (let j = 0; j < 250; j++) {
+          for (let j = 0; j < 249; j++) {
             if (data[j].region == `${regionListElement[i].innerText}`) {
               // make the card
               let card = document.createElement(`div`),
@@ -304,7 +304,7 @@ function makeChosenCardPage() {
       fetch(`./data.json`)
         .then((x) => x.json())
         .then((data) => {
-          for (let i = 0; i < 250; i++) {
+          for (let i = 0; i < 249; i++) {
             if (data[i].name == el.children[1].children[0].innerText) {
               chosenCountryFlag.innerHTML = `<img src='${data[i].flag}' alt=${data[i].name} title='${data[i].name}'>`;
               chosenCountryName.innerHTML = `${data[i].name}`;
@@ -342,7 +342,7 @@ function makeChosenCardPage() {
               }
               if (data[i].borders) {
                 for (let j = 0; j < data[i].borders.length; j++) {
-                  for (let k = 0; k < 250; k++) {
+                  for (let k = 0; k < 249; k++) {
                     if (data[k].alpha3Code == data[i].borders[j]) {
                       let span = document.createElement(`span`),
                         spanText = document.createTextNode(`${data[k].name}`);

@@ -7502,67 +7502,6 @@
     "independent": false
   },
   {
-    "name": "Israel",
-    "topLevelDomain": [".il"],
-    "alpha2Code": "IL",
-    "alpha3Code": "ISR",
-    "callingCodes": ["972"],
-    "capital": "Jerusalem",
-    "altSpellings": ["IL", "State of Israel", "Medīnat Yisrā'el"],
-    "subregion": "Western Asia",
-    "region": "Asia",
-    "population": 9216900,
-    "latlng": [31.5, 34.75],
-    "demonym": "Israeli",
-    "area": 20770,
-    "gini": 39,
-    "timezones": ["UTC+02:00"],
-    "borders": ["EGY", "JOR", "LBN", "SYR"],
-    "nativeName": "יִשְׂרָאֵל",
-    "numericCode": "376",
-    "flags": {
-      "svg": "https://flagcdn.com/il.svg",
-      "png": "https://flagcdn.com/w320/il.png"
-    },
-    "currencies": [
-      {
-        "code": "ILS",
-        "name": "Israeli new shekel",
-        "symbol": "₪"
-      }
-    ],
-    "languages": [
-      {
-        "iso639_1": "he",
-        "iso639_2": "heb",
-        "name": "Hebrew (modern)",
-        "nativeName": "עברית"
-      },
-      {
-        "iso639_1": "ar",
-        "iso639_2": "ara",
-        "name": "Arabic",
-        "nativeName": "العربية"
-      }
-    ],
-    "translations": {
-      "br": "Israel",
-      "pt": "Israel",
-      "nl": "Israël",
-      "hr": "Izrael",
-      "fa": "اسرائیل",
-      "de": "Israel",
-      "es": "Israel",
-      "fr": "Israël",
-      "ja": "イスラエル",
-      "it": "Israele",
-      "hu": "Izrael"
-    },
-    "flag": "https://flagcdn.com/il.svg",
-    "cioc": "ISR",
-    "independent": true
-  },
-  {
     "name": "Italy",
     "topLevelDomain": [".it"],
     "alpha2Code": "IT",
