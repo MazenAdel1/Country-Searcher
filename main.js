@@ -323,7 +323,7 @@ function makeChosenCardPage() {
                 span.className = `font-normal dark:text-gray-300`;
 
                 if (data[i].languages.length > 1) {
-                  if (j == data[i].languages.length) {
+                  if (j == data[i].languages.length - 1) {
                     spanText = document.createTextNode(
                       `${data[i].languages[j].name}`,
                     );
